@@ -8,7 +8,7 @@ class IntegrationTest < MiniTest::Test
     phone_book = PhoneBook.new
     entries = phone_book.lookup('Parker').sort_by { |e| e.first_name }
 
-    assert 3, entries.length
+    assert_equal 3, entries.length
     e1, e2, e3 = entries
 
     assert_equal "Agnes Parker", e1.name
