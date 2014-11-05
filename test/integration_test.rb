@@ -29,4 +29,14 @@ class IntegrationTest < MiniTest::Test
     assert_equal "Craig Parker", entry.name
     assert_equal "716-133-3210", entry.phone_number
   end
+
+  def test_reverse_lookup
+    phone_book = PhoneBook.new
+    entries = phone_book.reverse_lookup("716-133-3210")
+
+    assert_equal 1, entries.length
+    entry = entries.first
+    assert_equal "Craig Parker", entry.name
+    assert_equal "716-133-3210", entry.phone_number
+  end
 end

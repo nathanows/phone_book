@@ -26,4 +26,8 @@ class EntryRepository
     entries.select{|entry| entry.first_name == firstname && entry.last_name == lastname}
   end
 
+  def find_by_number(number)
+    entries.select{|entry| entry.phone_number == number}
+  end
+
 end
