@@ -11,7 +11,6 @@ class EntryRepository
     rows = data.map do |row|
       row.to_hash
     end
-    
     new(rows)
   end
 
@@ -23,5 +22,8 @@ class EntryRepository
     entries.select{|entry| entry.last_name == last_name}
   end
 
+  def find_by_first_and_last_name(firstname, lastname)
+    entries.select{|entry| entry.first_name == firstname && entry.last_name == lastname}
+  end
 
 end
