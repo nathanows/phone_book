@@ -8,7 +8,7 @@ class EntryRepositoryTest < Minitest::Test
     entries = [
       { first_name: 'Alice', last_name: 'Smith', phone_number: '111.111.1111'},
       { first_name: 'Bob', last_name: 'Smith', phone_number: '222.222.2222'},
-      { first_name: 'Cindy', last_name: 'Smith', phone_number: '333.333.3333'}
+      { first_name: 'Cindy', last_name: 'Johnson', phone_number: '333.333.3333'}
     ]
 
     repository = EntryRepository.new(entries)
